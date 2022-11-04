@@ -13,10 +13,13 @@ public class EnemyDesignerWindow : EditorWindow
     Texture2D rogueSectionTexture;
 
     Color headerSectionColor = new Color(13f / 255f, 32f / 255f, 44f / 255f, 1f);
+    Color mageSectionColor = new Color(0f / 255f, 0f / 255f, 225f / 255f, 1f);
+    Color warriorSectionColor = new Color(127f / 255f, 0f / 255f, 225f / 255f, 1f);
+    Color rogueSectionColor = new Color(255f / 255f, 255f / 255f, 0f / 255f, 1f);
 
     Rect headerSection;
     Rect mageSection;
-    Rect WarriorSection;
+    Rect warriorSection;
     Rect rogueSection; 
 
 
@@ -50,6 +53,19 @@ public class EnemyDesignerWindow : EditorWindow
         headerSectionTexture.SetPixel(0, 0, headerSectionColor);
         //Apply to headerSectionTexture
         headerSectionTexture.Apply();
+              
+
+        mageSectionTexture = new Texture2D(1, 1);
+        mageSectionTexture.SetPixel(0, 0, mageSectionColor);
+        mageSectionTexture.Apply();
+
+        warriorSectionTexture = new Texture2D(1, 1);
+        warriorSectionTexture.SetPixel(0, 0, warriorSectionColor);
+        warriorSectionTexture.Apply();
+
+        rogueSectionTexture = new Texture2D(1, 1);
+        rogueSectionTexture.SetPixel(0, 0, rogueSectionColor);
+        rogueSectionTexture.Apply();
     }
     /// <summary>
     /// Similar to any Update function,
@@ -57,14 +73,46 @@ public class EnemyDesignerWindow : EditorWindow
     /// </summary>
     void OnGUI()
     {
-        
+        DrawLayouts();
+        DrawHeader();
+        DrawMageSettings();
+        DrawWarriorSettings();
+        DrawRogueSettings();
     }
     /// <summary>
     /// Defines Rect values and paints textures based on Rects which are defined on top
     /// </summary>
     void DrawLayouts()
     {
+        // x and y position will be 0, it will be at the top left corner of the window at all time
+        headerSection.x = 0;
+        headerSection.y = 0;
+        // width will be according to the screen width
+        headerSection.width = Screen.width;
+        // height will be 50 
+        headerSection.height = 50;
 
+    
+        mageSection.x = 0;
+        mageSection.y = 50;
+        mageSection.width = Screen.width/ 3f;
+        mageSection.height = Screen.width - 50;
+
+        warriorSection.x = Screen.width/3f;
+        warriorSection.y = 50;
+        warriorSection.width = Screen.width / 3f;
+        warriorSection.height = Screen.width - 50;
+
+        rogueSection.x =Screen.width/3f *2;
+        rogueSection.y = 50;
+        rogueSection.width = Screen.width / 3f;
+        rogueSection.height = Screen.width - 50;
+
+        // pass the rect and texture
+        GUI.DrawTexture(headerSection, headerSectionTexture);
+        GUI.DrawTexture(mageSection, mageSectionTexture);
+        GUI.DrawTexture(warriorSection, warriorSectionTexture);
+        GUI.DrawTexture(rogueSection, rogueSectionTexture);
     }
     /// <summary>
     /// Draw contents of Header region
