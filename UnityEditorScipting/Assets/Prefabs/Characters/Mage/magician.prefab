@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6682951307296263132}
   - component: {fileID: 6682951307296263131}
   - component: {fileID: 6682951307296263130}
-  - component: {fileID: -7335544104238328874}
+  - component: {fileID: 36065662784980183}
   m_Layer: 0
-  m_Name: Ben
+  m_Name: magician
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6682951307296263129}
   m_Enabled: 1
---- !u!114 &-7335544104238328874
+--- !u!114 &36065662784980183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,4 +97,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ab20dc13193fd47af99048b094487e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mageData: {fileID: 11400000, guid: 3968a4638c79d0741aa7736d51334724, type: 2}
+  mageData: {fileID: 11400000, guid: a972e988da8e71149894d43ee1b83966, type: 2}

@@ -84,7 +84,7 @@ public class EnemyDesignerWindow : EditorWindow
     /// </summary>
     void InitTextures()
     {
-        headerSectionTexture = Resources.Load<Texture2D>("icons/249logo");
+        headerSectionTexture = Resources.Load<Texture2D>("icons/headerlogo2");
         //Define new Texture2D by 1 pixel wide and 1 pixel high
         /*headerSectionTexture = new Texture2D(1, 1);
         //Set the pixel at 0,0 position and colour according to headerSectionColor on top.
@@ -92,17 +92,17 @@ public class EnemyDesignerWindow : EditorWindow
         //Apply to headerSectionTexture
         headerSectionTexture.Apply();*/
 
-        mageSectionTexture = Resources.Load<Texture2D> ("icons/rosevale");
+        mageSectionTexture = Resources.Load<Texture2D> ("icons/page1");
         /*mageSectionTexture = new Texture2D(1, 1);
         mageSectionTexture.SetPixel(0, 0, mageSectionColor);
         mageSectionTexture.Apply();*/
 
-        warriorSectionTexture = Resources.Load<Texture2D>("icons/rosybrown");
+        warriorSectionTexture = Resources.Load<Texture2D>("icons/page2");
         /*warriorSectionTexture = new Texture2D(1, 1);
         warriorSectionTexture.SetPixel(0, 0, warriorSectionColor);
         warriorSectionTexture.Apply();*/
 
-        rogueSectionTexture = Resources.Load<Texture2D>("icons/silver");
+        rogueSectionTexture = Resources.Load<Texture2D>("icons/page3");
         /*rogueSectionTexture = new Texture2D(1, 1);
         rogueSectionTexture.SetPixel(0, 0, rogueSectionColor);
         rogueSectionTexture.Apply();*/
